@@ -3,25 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple beginner-friendly static website.">
-  <title>My First Website</title>
+  <meta name="description" content="A beginner-friendly static website built with HTML, CSS, and JavaScript.">
+  <title>My First Website | HTML, CSS &amp; JavaScript</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">My Website</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <p>
-      This is a simple static website built with HTML, CSS, and JavaScript.
-      Click the button below to see a friendly greeting.
-    </p>
-    <button type="button" onclick="showMessage()">Click Me</button>
+  <main id="main-content">
+    <section id="home" class="hero">
+      <h1>Welcome to My Website</h1>
+      <p>
+        This is a simple static website built with HTML, CSS, and JavaScript.
+        Click the button below to see a friendly greeting.
+      </p>
+      <div class="hero-actions">
+        <button type="button" class="btn" onclick="showMessage()">Say Hello</button>
+        <a class="btn btn-outline" href="#features">Explore the Page</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About This Site</h2>
+      <p>
+        Every page here is powered by just three files. HTML gives the page its
+        structure, CSS makes it look clean and friendly, and JavaScript adds a
+        touch of interactivity.
+      </p>
+      <ul class="file-list">
+        <li><code>index.html</code> builds the content</li>
+        <li><code>style.css</code> styles the layout</li>
+        <li><code>script.js</code> handles the greeting</li>
+      </ul>
+    </section>
+
+    <section id="features" class="section">
+      <h2>What's Inside</h2>
+      <p>Small pieces that together make a complete, responsive web page.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="card-number" aria-hidden="true">01</span>
+          <h3>Clean HTML5</h3>
+          <p>Semantic headings, sections, and navigation for a clear structure.</p>
+        </article>
+        <article class="card">
+          <span class="card-number" aria-hidden="true">02</span>
+          <h3>Simple CSS</h3>
+          <p>Soft colors, readable typography, and a layout that adapts to any screen.</p>
+        </article>
+        <article class="card">
+          <span class="card-number" aria-hidden="true">03</span>
+          <h3>Light JavaScript</h3>
+          <p>One friendly alert and an automatically updated copyright year.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Get in Touch</h2>
+      <p>Want to see more projects or just say hello? Find the source code and more on GitHub.</p>
+      <a class="btn" href="https://github.com/abuzarfriend3-droid" target="_blank" rel="noopener noreferrer">Visit My GitHub</a>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 My First Website. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> My First Website. All rights reserved.</p>
+    <a class="back-to-top" href="#home">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
